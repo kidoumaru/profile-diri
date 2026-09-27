@@ -1,0 +1,109 @@
+:root {
+    /* Warna default (Light Mode) berdasarkan CSS asli Anda */
+    --body-text: rgb(65, 21, 168);
+    --body-bg: #ffffff;
+    --input-bg: #ffffff;
+    --input-text: #000000;
+    --input-border: #cccccc;
+    --card-bg: #ffffff;
+    --card-border: #dddddd;
+}
+
+body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        margin: 0;
+        color: var(--body-text);
+        background-color: var(--body-bg); /* <--- TAMBAH INI */
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 24px;
+        background: rgb(9, 0, 0);
+        color: white;
+    }
+
+    .menu {
+        display: flex;
+        gap: 12px;
+        list-style: none;
+        flex-direction: column;
+    }
+
+    main {
+        padding: 24px;
+    }
+
+    #cari-skill {
+        padding: 8px 12px;
+        margin-bottom: 16px;
+        width: 100%;
+        max-width: 300px;
+        box-sizing: border-box;
+        background-color: var(--input-bg); /* <--- TAMBAH INI */
+        color: var(--input-text);          /* <--- TAMBAH INI */
+        border: 1px solid var(--input-border);
+    }
+
+    .skill-list {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .skill-card {
+        padding: 16px;
+        border: 1px solid var(--card-border);
+        border-radius: 8px;
+        background-color: var(--card-bg);
+        transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+
+    footer {
+        padding: 16px 24px;
+        background: rgb(0, 0, 0);
+        text-align: center;
+        color: white;
+    }
+
+    @media (min-width: 768px) {
+        .menu {
+            flex-direction: row;
+            gap: 24px;
+        }
+
+        .skill-list {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .skill-card {
+            flex: 1 1 calc(33.333% - 16px);
+            margin: 8px;
+        }
+    }
+
+    .rainbow-text-animated {
+  /* Notice red repeats at the end to make the loop seamless */
+  background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet, red);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  display: inline-block;
+  font-size: 48px;
+  font-family: sans-serif;
+  
+  /* Animate the gradient position infinitely */
+  animation: shift-gradient 4s linear infinite;
+}
+
+@keyframes shift-gradient {
+  to {
+    background-position: 200% center;
+  }
+}

@@ -1,0 +1,26 @@
+/* Variabel warna versi Dark Mode */
+[data-theme="dark"] {
+    --body-text: rgb(170, 140, 255); /* Warna teks ungu terang agar terbaca di background gelap */
+    --body-bg: #121212;              /* Background utama hitam gelap */
+    
+    --input-bg: #222222;             /* Background input pencarian */
+    --input-text: #ffffff;           /* Teks input pencarian */
+    --input-border: #444444;
+    
+    --card-bg: #1e1e1e;              /* Background kartu skill agak terang sedikit dari body */
+    --card-border: #333333;          /* Border kartu */
+}
+
+.theme-toggle-btn {
+    background: #222;
+    color: #fff;
+    border: 1px solid #444;
+    padding: 6px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+.theme-toggle-btn:hover {
+    background: #333;
+}
